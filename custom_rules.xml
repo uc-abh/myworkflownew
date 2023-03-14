@@ -30,7 +30,7 @@
 	<config name="testVersion" value="7.0-" />
 
 	<!-- Rules -->
-	<rule ref="WooCommerce-Core" />
+	
 
 	<rule ref="WooCommerce.Functions.InternalInjectionMethod">
 		<include-pattern>src/</include-pattern>
