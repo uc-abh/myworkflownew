@@ -43,12 +43,7 @@
 		<exclude-pattern>tests/</exclude-pattern>
 	</rule>
 
-	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
-		<exclude-pattern>includes/**/abstract-*.php</exclude-pattern>
-		<exclude-pattern>tests/</exclude-pattern>
-		<exclude-pattern>src/</exclude-pattern>
-		<exclude-pattern>tests/php/src/</exclude-pattern>
-	</rule>
+	
 
 	<rule ref="Squiz.Classes.ClassFileName">
 		<include-pattern>src/</include-pattern>
