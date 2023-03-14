@@ -32,13 +32,6 @@
 	<!-- Rules -->
 	
 
-	<rule ref="WooCommerce.Functions.InternalInjectionMethod">
-		<include-pattern>src/</include-pattern>
-		<include-pattern>tests/php/src/</include-pattern>
-		<properties>
-			<property name="injectionMethod" value="init"/>
-		</properties>
-	</rule>
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
