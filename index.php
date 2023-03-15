@@ -1,11 +1,11 @@
+
 <?php
+ 
 
-function say_hello($name)
-{
-    echo "Hello, " . $name . "!";
-}
+$x =  15   ;
+$y = 30;
+$z = $x + $y;
 
-$name = "John";
-say_hello($name);
+echo "Sum:  " . $z;
 
-?>
+
