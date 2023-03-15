@@ -15,12 +15,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-
-      - name: Install PHPCBF
-        run: composer global require "squizlabs/php_codesniffer=*"
-
-      - name: Run PHPCBF
-        run: phpcbf --standard=custom_rules.xml index.php
       
       - name: Install PHPCS
         run: composer global require "squizlabs/php_codesniffer=*"
