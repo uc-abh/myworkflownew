@@ -1,11 +1,8 @@
-
 <?php
- 
-
-$x =  15   ;
-$y = 30;
-$z = $x + $y;
-
-echo "Sum:  " . $z;
-
-
+                                // add two numbers
+                                $a = 1;
+                                $b = 2;
+                                $c = $a + $b;
+                                echo $c;
+    
+?>

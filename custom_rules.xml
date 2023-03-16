@@ -1,63 +1,75 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Coding Standards">
-	<description>WooCommerce dev PHP_CodeSniffer ruleset.</description>
+    <description>WooCommerce dev PHP_CodeSniffer ruleset.</description>
 
-	<file>.</file>
 
-	<!-- Exclude paths -->
-	<exclude-pattern>tests/cli/</exclude-pattern>
-	<exclude-pattern>includes/libraries/</exclude-pattern>
-	<exclude-pattern>includes/legacy/</exclude-pattern>
-	<exclude-pattern>includes/api/legacy/</exclude-pattern>
-	<exclude-pattern>includes/api/v1/</exclude-pattern>
-	<exclude-pattern>includes/class-wc-geo-ip.php</exclude-pattern>
-	<exclude-pattern>includes/wc-deprecated-functions.php</exclude-pattern>
-	<exclude-pattern>*/node_modules/*</exclude-pattern>
-	<exclude-pattern>*/vendor/*</exclude-pattern>
-	<exclude-pattern>lib/</exclude-pattern>
+    <file>.</file>
 
-	<!-- Show progress, show the error codes for each message (source). -->
-	<arg value="ps" />
+    <!-- Exclude paths -->
+    <exclude-pattern>tests/cli/</exclude-pattern>
+    <exclude-pattern>includes/libraries/</exclude-pattern>
+    <exclude-pattern>includes/legacy/</exclude-pattern>
+    <exclude-pattern>includes/api/legacy/</exclude-pattern>
+    <exclude-pattern>includes/api/v1/</exclude-pattern>
+    <exclude-pattern>includes/class-wc-geo-ip.php</exclude-pattern>
+    <exclude-pattern>includes/wc-deprecated-functions.php</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>lib/</exclude-pattern>
 
-	<!-- Strip the filepaths in reports down to the relevant bit. -->
-	<arg name="basepath" value="./" />
+    <!-- Show progress, show the error codes for each message (source). -->
+    <arg value="ps" />
 
-	<!-- Check up to 8 files simultaneously. -->
-	<arg name="parallel" value="8" />
+    <!-- Strip the filepaths in reports down to the relevant bit. -->
+    <arg name="basepath" value="./" />
 
-	<!-- Configs -->
-	<config name="minimum_supported_wp_version" value="5.2" />
-	<config name="testVersion" value="7.0-" />
+    <!-- Check up to 8 files simultaneously. -->
+    <arg name="parallel" value="8" />
 
-	<!-- Rules -->
-	<rule ref="Squiz.Classes.ClassFileName">
-		<include-pattern>src/</include-pattern>
-		<include-pattern>tests/php/src/</include-pattern>
-	</rule>
+    <!-- Configs -->
+    <config name="minimum_supported_wp_version" value="5.2" />
+    <config name="testVersion" value="7.0-" />
 
-	<rule ref="Squiz.Classes.ValidClassName">
-		<include-pattern>src/</include-pattern>
-		<include-pattern>tests/php/src/</include-pattern>
-	</rule>
+    <!-- Rules -->
+    <rule ref="Squiz.Classes.ClassFileName">
+        <include-pattern>src/</include-pattern>
+        <include-pattern>tests/php/src/</include-pattern>
+    </rule>
 
-	<rule ref="Generic.Commenting">
-		<exclude-pattern>tests/</exclude-pattern>
-	</rule>
+    <rule ref="Squiz.Classes.ValidClassName">
+        <include-pattern>src/</include-pattern>
+        <include-pattern>tests/php/src/</include-pattern>
+    </rule>
 
-	<rule ref="PEAR.Functions.FunctionCallSignature.EmptyLine">
-		<exclude-pattern>tests/e2e-tests/</exclude-pattern>
-	</rule>
+    <rule ref="Generic.Commenting">
+        <exclude-pattern>tests/</exclude-pattern>
+    </rule>
 
-	
+    <rule ref="PEAR.Functions.FunctionCallSignature.EmptyLine">
+        <exclude-pattern>tests/e2e-tests/</exclude-pattern>
+    </rule>
 
-	<rule ref="Squiz.Commenting.FileComment.MissingPackageTag">
-		<exclude-pattern>src/</exclude-pattern>
-		<exclude-pattern>tests/php/</exclude-pattern>
-	</rule>
+    
 
-	<rule ref="Squiz.Commenting.FunctionCommentThrowTag.Missing">
-		<exclude-pattern>tests/php/</exclude-pattern>
-	</rule>
+    <rule ref="Squiz.Commenting.FileComment.MissingPackageTag">
+        <exclude-pattern>src/</exclude-pattern>
+        <exclude-pattern>tests/php/</exclude-pattern>
+    </rule>
 
-	
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag.Missing">
+        <exclude-pattern>tests/php/</exclude-pattern>
+    </rule>
+
+    
+
+
+<rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+        <property name="indent" value="4" />
+        <property name="tabIndent" value="false" />
+        <property name="ignoreIndentationErrors" value="false" />
+    </properties>
+</rule>
+    
 </ruleset>
+
