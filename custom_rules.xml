@@ -65,7 +65,7 @@
 
 <rule ref="Generic.WhiteSpace.ScopeIndent">
     <properties>
-        <property name="indent" value="4" />
+        <property name="indent" value="2" />
         <property name="tabIndent" value="false" />
         <property name="ignoreIndentationErrors" value="false" />
     </properties>
