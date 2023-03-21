@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Coding Standards">
-    <description>WooCommerce dev PHP_CodeSniffer ruleset.</description>
-
+<ruleset name="WooCommerce Coding Standards">
+    <description>Custom coding standards for WooCommerce development.</description>
 
     <file>.</file>
 
@@ -31,6 +30,37 @@
     <config name="testVersion" value="7.0-" />
 
     <!-- Rules -->
+
+    <!-- PHP Compatibility -->
+   
+
+    <!-- WordPress Coding Standards -->
+    <rule ref="WordPress">
+        <exclude-pattern>tests/</exclude-pattern>
+        <exclude-pattern>vendor/</exclude-pattern>
+    </rule>
+
+    <!-- WooCommerce-specific Rules -->
+    <rule ref="Generic.Commenting.DocComment">
+        <properties>
+            <property name="allow_inline_comments" value="false"/>
+        </properties>
+    </rule>
+
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="indent" value="10"/>
+        </properties>
+        
+    </rule>
+
+    <rule ref="WordPress.Files.FileName.InvalidClassFileName">
+        <exclude-pattern>includes/**/abstract-*.php</exclude-pattern>
+        <exclude-pattern>tests/</exclude-pattern>
+        <exclude-pattern>src/</exclude-pattern>
+        <exclude-pattern>tests/php/src/</exclude-pattern>
+    </rule>
+
     <rule ref="Squiz.Classes.ClassFileName">
         <include-pattern>src/</include-pattern>
         <include-pattern>tests/php/src/</include-pattern>
@@ -49,27 +79,27 @@
         <exclude-pattern>tests/e2e-tests/</exclude-pattern>
     </rule>
 
-    
+    <rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
+        <exclude-pattern>i18n/</exclude-pattern>
+        <exclude-pattern>src/</exclude-pattern>
+        <exclude-pattern>tests/php</exclude-pattern>
+        <exclude-pattern>tests/Tools/</exclude-pattern>
+    </rule>
 
     <rule ref="Squiz.Commenting.FileComment.MissingPackageTag">
         <exclude-pattern>src/</exclude-pattern>
-        <exclude-pattern>tests/php/</exclude-pattern>
-    </rule>
+		<exclude-pattern>tests/php/</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FileComment.Missing">
+		<exclude-pattern>src/</exclude-pattern>
+		<exclude-pattern>tests/php/</exclude-pattern>
+	</rule>
 
-    <rule ref="Squiz.Commenting.FunctionCommentThrowTag.Missing">
-        <exclude-pattern>tests/php/</exclude-pattern>
-    </rule>
+	<rule ref="Squiz.Commenting.FunctionCommentThrowTag.Missing">
+		<exclude-pattern>tests/php/</exclude-pattern>
+	</rule>
 
-    
-
-
-<rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-        <property name="indent" value="2" />
-        <property name="tabIndent" value="false" />
-        <property name="ignoreIndentationErrors" value="false" />
-    </properties>
-</rule>
-    
+	<rule ref="Squiz.Commenting.FileComment.Missing">
+		<exclude-pattern>tests/php/</exclude-pattern>
+	</rule>
 </ruleset>
-
