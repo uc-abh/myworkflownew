@@ -1,6 +1,6 @@
 <?php
 						 // add two numbers
-						 $a = 1;
-						 $b = 2;
-						 $c = $a + $b;
+						 $a       = 1;
+						 $b       = 2;
+							   $c = $a + $b;
 						 echo $c;
